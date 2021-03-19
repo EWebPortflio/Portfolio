@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>LeeHangseok - Portfolio</title>
+
+
+
+    <style type="text/css">
+    #toTop
+    {
+       background:none;
+       position:fixed;
+       bottom:1px;
+       right:1px;
+       cursor:pointer;
+       text-decoration:none;
+       border-radius:5px;
+       -moz-border-radius:5px;
+       -webkit-border-radius:5px;
+       padding:5px
+       }
+
+
+
+
+
+
+
+
+
+    </style>
+
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <a id="toTop" href="#"><img src="img/totop.png" width="55" height="55" alt="맨 위로"></a>
+
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="post.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/post-bg.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>This page is the projects I've been working on</h1>
+              <h2 class="subheading">From 2013</h2>
+              <span class="meta">In Chosun univ.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+
+
+
+            <h2 class="section-heading">Window System with Automatic control and Fire Notification</h2>
+
+            <p>In the case of opening window and being outside of house, the raindrops can come and wet the
+laundry.</p>
+
+            <p>In addition, In the case of when a fire occurs in an apartment, the fire can go through the open
+window</p>
+
+            <p>This study aims to integrate two devices using open source; a sensor that closes the window
+when it rains and enables the owner to control the window using blutooth from his or her smartphone. and
+a flame detecter.</p>
+
+            <p>Keywords : Automatic control, Smartphone, Bluetooth, Open source</p>
+
+            <p> <b>1. Motivation</b></p>
+            <p>There will be more than one or two occasions where I have had a shower experience when I go outdoors with my window open. If you leave your laundry out of the way, you will have to do your laundry again, but there are molds around the windows that can be troublesome. In a building like an apartment, a fire alarm is located in the kitchen or in the center of the water, but in the event of a fire, it is very likely to spread with the wind through windows. Therefore, in this paper, it is automatically closed when rain comes, and it is a goal to integrate a device that controls the degree of opening of a window through a Bluetooth connection of an individual smartphone and a device that notifies a siren when a flame is detected.</p>
+
+            <p><b> 2. Development Environment And Sensor Used</b></p>
+            <p>It was developed by the editions of Windows 10 Education, using Arduino IDE version 1.8.5 and Google App Inventor 2</p>
+
+
+
+            <a href="#">
+              <img class="img-fluid" src="img/UseSensor.JPG" alt="">
+            </a>
+            <span class="caption text-muted">Sensor Chart</span>
+
+
+            <p><b> 3. Use open source</b></p>
+            <p> Using the ArduinoThread (MIT lisence) of ivanseidel, we paralleled the automatic control function and the fire notification function, and operated the servomotor to move the window using the Servo (GNU language).</p>
+
+            <p><b> 4. Features and Interfaces</b></p>
+            <p> When the device is turned on, the window control and flame detection sensors are paralleled by alternating operations at 1ms intervals by the Thread library. Users can download the app created with App Inventor and operate it, and the current temperature can be checked through Arduino's temperature sensor. Users can press the window automatic setting button when they go out. if water comes into the rain water sensor, the resistance value decreases. If the value falls below the set value, the window will automatically close. If it exceeds the set value, the window is opened for ventilation. In addition, users can control the degree of opening fully closed, half open / close, fully open.</p>
+            <p> The flame detection sensor is measured at intervals of 200 ms. In normal times, the RGB LED keeps the green light, and when a certain flame is detected, the red light is flickered and the siren is set to sound.</p>
+
+            <a href="#">
+              <img class="img-fluid" src="img/AutoWindow.jpg" alt="">
+            </a>
+            <span class="caption text-muted">Picture of connented curcuit & Application</span>
+
+            <p> Prototypes</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MKss6rG2aHs?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+            <p><b> 4. Experiments and results</b></p>
+
+            <p> In order to check the operation of the device, it was confirmed that each part was processed in parallel by connecting the power source. After setting the value of each rain sensor and flame sensor at a medium value, I can confirm that it works.</p>
+
+            <p><b> 5. Conclusion </b></p>
+            <p> There are many people who are affected by suddenly climate change. In this paper, we have designed and developed automatic control windows and fire notification window devices and applications to solve these problems, and confirmed that they work properly. It is expected that this will provide not only convenience, but also a safer preparation for safety.</p>
+
+            <p><mark>If you want to know more</mark>
+              <a href="https://github.com/LeeHangseok/Automatical-window/">GitHub Page</a>. </p>
+
+
+
+
+
+
+
+
+
+
+
+            <h2 class="section-heading">Hwasun Local Swimming Pool Management Database Program</h2>
+
+            <p><b> 1. Motivation</b></p>
+            <p> When I was in vacation, I would go swimming with my friends and a public facility in Hwasun County near the area. The purpose is to create a database program to manage this swimming facility.</p>
+            <a href="#">
+              <img class="img-fluid" src="img/Swimming.jpg" alt="">
+            </a>
+            <p><b> 2. Purpose of Development</b></p>
+            <p> Although there are staff members in the facility, realistic swimwear rental management, sale of goods, and facility use time are not managed. The goal of this program is to compensate for the insufficiency of such management.</p>
+
+
+            <p><b> 3. Development Environment</b></p>
+
+            <a href="#">
+              <img class="img-fluid" src="img/SDev.jpg" alt="">
+            </a>
+            <span class="caption text-muted">Development Environment</span>
+
+
+
+            <p><b> 4. Requirements Analysis</b></p>
+
+            <p> Hwasun Pool is available to <b>members</b> who have registered with their <u>name, age, address, and mobile phone number</u>, and several <b>swimming instructors</b> give swimming lessons.</p>
+            <p> Members can log in to the management system with their <u>membership number and password</u> that they were given when they joined and they can see their <u>last use date.</u></p>
+            <p> Instructors in the institute have their <u>instructor's number, password, name, age, and telephone number</u>, manage the <b>facilities</b> such as the internal vault, and view the status of each facility. </p>
+            <p> There are <b>consumables</b> such as medicines for managing the quality of the water in the swimming pool, and there are an <u>article number, an article name, and a quantity</u>. If the facility is out of order, you can view the saved <b>AS center</b> list, <u>center number, center name, and phone number.</u></p>
+            <p> There are <b>places to rent</b> swimwear, swimwear and goggles in the swimming pool, and you can see the <u>item number, the name of the item, the rental status, and the rental fee.</u></p>
+            <p> You can also buy beverages and sweets from the <b>convenience store.</b></p>
+            <p> <u>The price, product name, product number, and quantity</u> of each item are stored. The convenience store stores the <u>purchase details of the members</u> and stores the information of the connected suppliers. <b>The supplier</b> consists of the business <u>registration number, location, telephone number, company name, and account number.</u></p>
+
+
+
+
+            <p><b> 5. Conceptual Design</b></p>
+            <a href="#">
+              <img class="img-fluid" src="img/SLogical.jpg" alt="">
+            </a>
+            <span class="caption text-muted">Conceptual design1</span>
+
+            <a href="#">
+              <img class="img-fluid" src="img/SLogical2.jpg" alt="">
+            </a>
+            <span class="caption text-muted">Conceptual design2</span>
+
+            <a href="#">
+              <img class="img-fluid" src="img/SRelation.jpg" alt="">
+            </a>
+            <span class="caption text-muted">Identify Relationships</span>
+
+            <a href="#">
+              <img class="img-fluid" src="img/SERwin.jpg" alt="">
+            </a>
+            <span class="caption text-muted">Create ERWin-ERD</span>
+
+
+            <p><b> 6. Physical Design</b></p>
+            <p>  1) DataBase Schema</p>
+            <a href="#">
+              <img class="img-fluid" src="img/SSchema.jpg" alt="">
+            </a>
+            <span class="caption text-muted">DataBase Schema</span>
+
+            <p>  2) State of DataBase </p>
+            <a href="#">
+              <img class="img-fluid" src="img/SDB1.JPG" alt="">
+            </a>
+            <span class="caption text-muted">Example Of 12 Table</span>
+
+            <p>  3) Normalization </p>
+
+            <p>   (1) First Normalization </p>
+            <a href="#">
+              <img class="img-fluid" src="img/SN1.jpg" alt="">
+            </a>
+            <span class="caption text-muted">USE TABLE's First Normalization</span>
+
+            <p>   (2) Second Normalization </p>
+            <a href="#">
+              <img class="img-fluid" src="img/SN2.JPG" alt="">
+            </a>
+            <span class="caption text-muted">Second Normalization</span>
+
+            <p>   4) Working with SQL Query Statements </p>
+            <a href="#">
+              <img class="img-fluid" src="img/SSql.JPG" alt="">
+            </a>
+            <span class="caption text-muted">Create a Total Of <u>12</u> Tables</span>
+
+
+            <p><b> 7. Implementation and Demos</b></p>
+            <p>   1) Java Projects</p>
+            <a href="#">
+              <img class="img-fluid" src="img/SID1.jpg" alt="">
+            </a>
+            <span class="caption text-muted">Java Projects on Eclipse</span>
+
+            <p>   2) GUI </p>
+            <a href="#">
+              <img class="img-fluid" src="img/SLog1.jpg" alt="">
+            </a>
+            <span class="caption text-muted">Member's Login</span>
+
+            <a href="#">
+              <img class="img-fluid" src="img/SWin1.jpg" alt="">
+            </a>
+            <span class="caption text-muted">Member Windows and Instructor Windows</span>
+
+            <p>   3) Demonstration </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/IKzLHwbe5X8?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+            <p><b> 8. Conclusion </b></p>
+<p>It was a long time to find a subject that was interesting to me at first, but it seemed that I started to work even harder because it was the subject that I have attached to it. In the case of a login implementation in Oracle, I had to compare whether the value received from the text field matches the value in the database, but it took some time to understand it because I did not know how to use the function in jdbc. It was most impressive to use Java to access and influence other areas of Oracle, and I thought it would be useful for future projects.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="section-heading">Real-time domestic Internet news Big Data gathering </h2>
+
+<p>Modern people are so busy that it is hard to recognize the knowledge or situation of current events, which creates a lack of communication between them an deepening the digital divide.</p>
+
+<p>Even if you know the current information, you could get biased information if you read only one media article. Because of this, find other article is time-consuming and cumbersome to find.
+</p>
+
+<p>So, we made it simple for us to show and recommend the most frequently used keywords in articles by categories.</p>
+
+<p>Keywords : Bigdata, News collector, Raspberry pi, Open source</p>
+
+<p> <b>1. Motivation</b></p>
+<p>Todays People are very busy doing their works or job, So they don’t have enough time to find or read a news articles.
+  In addition, Since different news media have different opinion, You might get a biased information from them.
+</p>
+<p><b> 2. Development Environment And Sensor Used</b></p>
+<p>It was developed by the editions of Windows 10 Education, RASPBIAN 4.14, Java JDK 10, Eclipse Java Oxygen 4.7.2, R Version 3.4.4</p>
+<p>Raspberry Pi 3 B, Raspberry Pi 7 inch Touch Display, MicroSDHC Ultra Class10 32GB</p>
+
+
+<a href="#">
+  <img class="img-fluid" src="img/flowchart.png" alt="">
+</a>
+<span class="caption text-muted">Using Algorithm</span>
+
+
+
+
+<p><b> 3. Role Sharing</b></p>
+<p> (1) Lim Ga Deuk – Data Collection using R</p>
+<p> (2) Lee Haeng Seok – R, Java Interlink, GUI Design</p>
+<p> (3) Wi Jong Yeong – Processing data collected by R into JAVA</p>
+<p> (4) Shin Tae Young – JAVA support, Version management </p>
+<p> (5) Jeon Joon – Create Raspberry pi Cluster, GUI Design </p>
+
+
+<a href="#">
+  <img class="img-fluid" src="img/RSchedule.png" alt="">
+</a>
+<span class="caption text-muted">Detailed Schedule</span>
+
+
+<p><b> 4. Program Mechanism</b></p>
+<a href="#">
+  <img class="img-fluid" src="img/RMech.png" alt="">
+</a>
+<span class="caption text-muted">Program Mechanism</span>
+
+
+<p><b> 5. Project Details</b></p>
+<a href="#">
+  <img class="img-fluid" src="img/R1.png" alt="">
+</a>
+<span class="caption text-muted">Choose one keyword from the most articles out of hot keywords in all news categories as the most important keyword </span>
+
+
+<a href="#">
+  <img class="img-fluid" src="img/R2.png" alt="">
+</a>
+<span class="caption text-muted">The screen displayed when “사회” category is selected </span>
+<p> - Lists top to bottom in order of frequently used keywords</p>
+
+
+
+<a href="#">
+  <img class="img-fluid" src="img/R3.png" alt="">
+</a>
+<span class="caption text-muted">The screen displayed when ”서울” keyword is selected</span>
+<p> - Show the presses that have written articles with selected keywords</p>
+
+
+<a href="#">
+  <img class="img-fluid" src="img/R4.png" alt="">
+</a>
+<span class="caption text-muted">The screen displayed when “연합뉴스” press is selected</span>
+<p> - Show articles by selected press</p>
+
+
+
+<a href="#">
+  <img class="img-fluid" src="img/R5.png" alt="">
+</a>
+<span class="caption text-muted">When an article is selected, the article is displayed on the Internet</span>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/F4NroYbJYvs?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+<p><b> 5. Insufficient Parts</b></p>
+
+<p> (1) The ability to filter in the process of extracting keywords is insufficient</p>
+<p> (2) It failed to solve package errors while deploying a cluster</p>
+
+
+<p><b> 6. Conclusion </b></p>
+<p> This device is expectable that the ability to distinguish the fake news from real news will be updated, because they can be viewed by media companies</p>
+
+<p><mark>If you want to know more</mark>
+  <a href="https://github.com/LimFull/Internet-News-Collector">GitHub Page</a>. </p>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section-heading">RunTogether </h2>
+
+  <p>Which one is better? Exercise alone or Exercise together?</p>
+  <p>Usually when we exercise alone, we can not be patient and it is not funny.</p>
+
+
+  <a href="#">
+    <img class="img-fluid" src="img/RunTogetherResearch.png" alt="">
+  </a>
+  <span class="caption text-muted"></span>
+
+  <p> There is a research that new exercise partner is the key to exercising more.</p>
+  <p> Our app helps you to find your friends around and exercise in a good environment.</p>
+
+  <p>Keywords : Health-Related, App & Web Platform, IoT Project,  your friends around and exercise in a good environment</p>
+
+
+  <p> <b>1. Role Sharing</b></p>
+
+  <a href="#">
+    <img class="img-fluid" src="img/RunTogetherRole.PNG" alt="">
+  </a>
+  <span class="caption text-muted"></span>
+
+
+  <p><b> 2. Development Environment And Sensor Used</b></p>
+  <p> Android Studio, MySQL, PHP, Python, SQL lite</p>
+  <p> Udoo Neo, Alphasnese(CO, SO2, NO2, O3), Airbeam(PM2.5, PM10), Polar(Heart rate, RR Interval),MicroSDHC 16GB</p>
+
+
+  <a href="#">
+    <img class="img-fluid" src="img/RunIm.PNG" alt="">
+  </a>
+  <span class="caption text-muted">This is What we implemented</span>
+
+
+
+  <p><b> 3. Reference Model</b></p>
+  <a href="#">
+    <img class="img-fluid" src="img/RunTogetherReference.PNG" alt="">
+  </a>
+  <span class="caption text-muted"></span>
+
+
+  <p><b> 4. System Architecture</b></p>
+  <a href="#">
+    <img class="img-fluid" src="img/RunTogetherSystem.PNG" alt="">
+  </a>
+  <span class="caption text-muted"></span>
+
+
+  <p><b> 5. ER Model</b></p>
+  <a href="#">
+    <img class="img-fluid" src="img/RunTogetherER.PNG" alt="">
+  </a>
+  <span class="caption text-muted"></span>
+
+
+  <p><b> 6. Procedure Samples</b></p>
+  <a href="#">
+    <img class="img-fluid" src="img/RunTogetherPD1.PNG" alt="">
+  </a>
+  <span class="caption text-muted"></span>
+
+  <a href="#">
+    <img class="img-fluid" src="img/RunTogetherPD2.PNG" alt="">
+  </a>
+  <span class="caption text-muted"></span>
+
+
+  <p><b> 7. Flowchart Samples</b></p>
+  <a href="#">
+    <img class="img-fluid" src="img/RunTogetherFC1.PNG" alt="">
+  </a>
+  <span class="caption text-muted"></span>
+
+  <a href="#">
+    <img class="img-fluid" src="img/RunTogetherFC2.PNG" alt="">
+  </a>
+  <span class="caption text-muted"></span>
+
+
+  <a href="#">
+    <img class="img-fluid" src="img/RunTogetherFC3.PNG" alt="">
+  </a>
+  <span class="caption text-muted"></span>
+
+
+  <p><b> 8. QuickView</b></p>
+  <p>※ Left is Moblie Application, Right is Web Page</p>
+  <p> (1) Sign Up</p>
+  <a href="#">
+    <img class="img-fluid" src="img/RunTogetherQ1.PNG" alt="">
+  </a>
+  <span class="caption text-muted">In sign up page, user need to write email address, password, nickname, age and gender</span>
+
+
+ <p> (2) GoogleMaps With GPS Sensor</p>
+  <a href="#">
+    <img class="img-fluid" src="img/RunTogetherQ2.PNG" alt="">
+  </a>
+  <span class="caption text-muted">Map will show you your movement, when user click start button, then app start to draw the line on the map , and when they click finish button, the path will be saved and user can see the line on the web as well
+</span>
+
+<p> (3) Air Quality View With Udoo Board's Sensor</p>
+  <a href="#">
+    <img class="img-fluid" src="img/RunTogetherQ3.PNG" alt="">
+  </a>
+  <span class="caption text-muted">App client also show the smile chart that help user understand  easily how good or bad now’s air quality are</span>
+
+
+  <p> (4) GoogleChart</p>
+    <a href="#">
+      <img class="img-fluid" src="img/RunTogetherQ4.PNG" alt="">
+    </a>
+    <span class="caption text-muted">User can select type of data, and also can choose period.</span>
+
+    <p> (5) Sensor List View</p>
+      <a href="#">
+        <img class="img-fluid" src="img/RunTogetherQ5.PNG" alt="">
+      </a>
+      <span class="caption text-muted">This function can help  user to manage the sensor list easily</span>
+
+      <p> (6) User's Real Time Air Quality View</p>
+        <a href="#">
+          <img class="img-fluid" src="img/RunTogetherQ6.PNG" alt="">
+        </a>
+        <span class="caption text-muted">We can see all logged in user list and when choose the specific user then we can see their data.</span>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script src="js/jquery.scroll.pack.js"></script>
+<script src="js/jquery.easing.js"></script>
+<script>
+//<![CDATA[
+$(function(){$("#toTop").scrollToTop({speed:1000,ease:"easeOutBack",start:400})});
+//]]>
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
